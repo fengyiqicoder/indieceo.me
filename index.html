@@ -1,3 +1,26 @@
-I am a fucking indie CEO
-<br>
-<a href="https://twitter.com/feng_yq?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @feng_yq</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<head>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                let email = "fengyiqicoder@gmail.com"
+                let project = "IndieCEO"
+                var settings = {
+                    "url": "https://us-central1-landingpage-355609.cloudfunctions.net/landingpage?email=" + email + "&project=" + project,
+                    "method": "GET",
+                    "timeout": 0,
+                };
+
+                $.ajax(settings).done(function (response) {
+                    console.log(response);
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="button" id="btn">
+        I'm Indie CEO Bitch
+    </div>
+</body>
